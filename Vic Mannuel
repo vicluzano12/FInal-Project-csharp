@@ -1,1 +1,31 @@
-kjewghfiwehgohweo
+using System;
+
+public struct Time
+{
+    private readonly int minutes;
+
+    public Time(int hh, int mm)
+    {
+        this.minutes = 60 * hh + mm;
+    }
+
+    public override string ToString()
+    {
+        return minutes.ToString();
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Time morning = new Time(10, 5);
+        Time midnight = new Time(0, 45);
+        Time evening = new Time(21, 30);
+
+        Console.WriteLine("Morning time: " + morning);
+        Console.WriteLine("Midnight time: " + midnight);
+        Console.WriteLine("Evening time: " + evening);
+    }
+}
+
